@@ -2,18 +2,21 @@
 #define __ModuleWindow_H__
 
 // TODO 1: Create the declaration of ModuleWindow class#ifndef __MODULE_H__
-class SDL_Window*
 
 class ModuleWindow : public Module
 {
 public:
 
+
 	bool Init();
-	bool CleanUp() { return true };
+	bool CleanUp() { return true; };
+
 
 private:
 
-	SDL_Window* window = nullptr;
+	//SDL_Window* window = nullptr;
+	
+
 
 };
 

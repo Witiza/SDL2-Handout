@@ -16,12 +16,21 @@
 bool ModuleWindow::Init()
 {
 	bool ret = true;
+	SDL_Window* window = nullptr;
+	SDL_Surface* surface = nullptr;
 	if(SDL_Init(SDL_INIT_VIDEO) != 0)
 	{
 		LOG("Unable to initialize the library, error %s \n", SDL_GetError());
 		ret = false;
 	}
 	return ret;
+	
+	if ((window = SDL_CreateWindow("SDL2Handout", SDL_WINDOW_RESIZABLE, SDL_WINDOW_RESIZABLE, 448, 640, FULLSCREEN)) != 0)
+	{
+		LOG("Unable to initialize the library, error %s \n", SDL_GetError());
+		ret = false;
+	}
+	
 
-	window = SDL_CreateWindow("SDL2Handout", SDL_WINDOW_RESIZABLE, SDL_WINDOW_RESIZABLE, 448, 640, FULLSCREEN);
+
 }
